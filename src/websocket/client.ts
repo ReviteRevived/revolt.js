@@ -89,9 +89,7 @@ export class WebSocketClient {
                 );
             }
 
-            const ws = new WebSocket(
-                "wss://stoat.chat/events?version=1&format=json",
-            );
+            const ws = new WebSocket(this.client.configuration.ws);
             this.ws = ws;
 
             ws.onopen = () => {
